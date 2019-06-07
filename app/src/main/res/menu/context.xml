@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:id="@+id/cont_share"
+        android:title="Share it"/>
+    <item android:id="@+id/cont_comment" android:title="Comment"/>
+    <item android:id="@+id/cont_p_req" android:title="Prayer Request"/>
+</menu>

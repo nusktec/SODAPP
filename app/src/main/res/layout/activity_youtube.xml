@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical"
+    tools:context="com.nsc.sodapp.Youtube_Panel">
+
+
+    <ScrollView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:id="@+id/youtube_palyer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.google.android.youtube.player.YouTubePlayerView>
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_margin="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:onClick="w_pause"
+                    android:layout_marginRight="10dp"
+                    android:background="#0000"
+                   android:src="@mipmap/btn_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageButton
+                    android:onClick="w_play"
+                    android:layout_marginRight="10dp"
+                    android:background="#0000"
+                    android:src="@mipmap/btn_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageButton
+                    android:onClick="w_stop"
+                    android:background="#0000"
+                    android:src="@mipmap/btn_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.nsc.sodapp.SOD_READ">
+
+    <item
+        android:id="@+id/chat_menu_invite"
+        android:title="Invite A Friend"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/chat_menu_night"
+        android:title="Night Mode on/off"
+        app:showAsAction="never" />
+
+
+    <item
+        android:icon="@mipmap/settings"
+        android:title="Chat Settings"
+        app:showAsAction="always">
+
+        <menu>
+
+            <item
+                android:title="Notification"
+                app:showAsAction="never">
+
+                <menu>
+
+                    <item
+                        android:id="@+id/chat_menu_disable_noti"
+                        android:title="Disable"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/chat_menu_enable_noti"
+                        android:title="Enable"
+                        app:showAsAction="never" />
+
+                </menu>
+
+            </item>
+
+            <item
+                android:title="Vibration"
+                app:showAsAction="never">
+
+                <menu>
+
+                    <item
+                        android:id="@+id/chat_menu_disable_vibr"
+                        android:title="Disable"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/chat_menu_enable_vira"
+                        android:title="Enable"
+                        app:showAsAction="never" />
+
+                </menu>
+
+            </item>
+
+
+        </menu>
+
+    </item>
+
+
+
+    <item
+        android:icon="@mipmap/clear_img"
+        android:id="@+id/chat_menu_clear"
+        android:orderInCategory="100"
+        android:title="Clear Chat"
+        app:showAsAction="never" />
+
+    <item
+        android:icon="@mipmap/user_room"
+        android:id="@+id/chat_menu_name"
+        android:title="Clear Chat"
+        app:showAsAction="always" />
+</menu>

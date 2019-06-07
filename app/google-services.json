@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "685668270303",
+    "firebase_url": "https://seedsapp-642ad.firebaseio.com",
+    "project_id": "seedsapp-642ad",
+    "storage_bucket": "seedsapp-642ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685668270303:android:7204d5fc8f9e608d",
+        "android_client_info": {
+          "package_name": "com.nsc.sodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685668270303-846cv8hqin5h1fobvb99rq5mrpnbva8m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nsc.sodapp",
+            "certificate_hash": "9396da751de5b0c9e97e740d98a8d934eec4df78"
+          }
+        },
+        {
+          "client_id": "685668270303-epsvhhh8bt23u23mmb90ekdbar5hdho3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nsc.sodapp",
+            "certificate_hash": "f81fa0c3cb175c9b7063fc653e86096967398d68"
+          }
+        },
+        {
+          "client_id": "685668270303-sh7c0j9k7pmiv8tce1cg8s87rbi9vp2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKmCt0O52u1-WKqkE9FgeQysSK9Z12iqU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685668270303-sh7c0j9k7pmiv8tce1cg8s87rbi9vp2m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

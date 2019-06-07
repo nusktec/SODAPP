@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.nsc.sodapp.AboutDunamis"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_about_dunamis">
+
+    <ScrollView
+        android:background="@color/mainColor"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="Dunamis International Gospel Centre (DIGC), is a powerfully anointed church, headquartered at Abuja, Nigeria, with Dr Paul and Dr Becky Enenche, as the Senior Pastors. It is a power-packed arena where God’s Presence, Principles and Power are at work for the salvation, healing and restoration of human destinies and dignities.
+
+Dunamis International Gospel Centre (DIGC), is also a revival and end time fire distribution centre, where ministers from around the globe gather to experience the deep, palpable and feelable Presence of God; connect with God’s heartbeat for the present, receive current instructions for the end time assignment and get imparted to take charge of their territories for God. See more: Int’l Ministers Flaming Fire Conference
+
+THE MEANING OF DUNAMIS
+
+Dunamis (Doo'na-mis) is the Greek word that means POWER. It is a power source that reproduces itself without reduction in intensity. That is why at Dunamis International Gospel Centre (DIGC), the destiny and dignity of nations, ministers, ministries, families and individuals are being imparted and restored on daily basis, as evidence of the intensity of God’s Presence and Power that is resident in Dunamis International Gospel Centre and her many satellite locations. You are next in line for God’s touch!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

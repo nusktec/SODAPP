@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:id="@+id/youtube_play" app:showAsAction="always" android:onClick="playVideo" android:title="Play" android:icon="@mipmap/youtube_play"/>
+    <item android:id="@+id/youtube_stop" app:showAsAction="always" android:onClick="stopVideo" android:title="Stop" android:icon="@mipmap/youtube_stop"/>
+    <item android:id="@+id/youtube_reload" app:showAsAction="always" android:onClick="reloadVideo" android:title="Reload" android:icon="@mipmap/youtube_reload"/>
+</menu>

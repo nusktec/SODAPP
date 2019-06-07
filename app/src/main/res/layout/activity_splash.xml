@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top|center"
+    tools:context="com.nsc.sodapp.Splash">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:gravity="center">
+
+
+       <TextView
+           android:visibility="gone"
+           android:layout_margin="20dp"
+           android:id="@+id/splash_text"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="87dp"
+           android:text="Seeds Of Destiny"
+           android:textAlignment="center"
+           android:textColor="#fff"
+           android:textSize="20dp"
+           android:shadowColor="@color/colorPrimaryDark"
+           android:paddingTop="5dp"
+           android:paddingBottom="5dp"
+           android:paddingLeft="30dp"
+           android:paddingRight="30dp"
+           android:layout_alignParentBottom="true"
+
+           android:layout_centerHorizontal="true" />
+
+
+       <ImageView
+           android:id="@+id/welcom_animation"
+           android:src="@drawable/duna_logo"
+           android:layout_width="120dp"
+           android:layout_height="100dp" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="bottom"
+           android:shadowColor="#fff"
+           android:text="Seeds Of Destiny"
+           android:textAlignment="center"
+           android:textColor="#3949AB"
+           android:textSize="18dp" />
+
+
+       <TextView
+           android:id="@+id/textV"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:layout_centerHorizontal="true"
+           android:gravity="bottom"
+           android:shadowColor="#fff"
+           android:text="Powered by Dunamis Int'l Gospel Centre"
+           android:textAlignment="center"
+           android:textColor="#8B8B8B"
+           android:textStyle="italic"
+           android:textSize="11dp" />
+   </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:shadowColor="#242323"
+            android:text="RSC Byte Code"
+            android:textAlignment="center"
+            android:textColor="#494949"
+            android:textSize="13dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

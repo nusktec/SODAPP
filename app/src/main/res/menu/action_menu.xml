@@ -1,0 +1,55 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:title="Chat Room"
+        android:icon="@mipmap/menu_chat"
+        app:showAsAction="always"
+        android:orderInCategory="0"
+        android:id="@+id/menu_chat_room" />
+
+    <item android:title="Share"
+        android:icon="@mipmap/send_as"
+        app:showAsAction="never"
+        android:orderInCategory="0"
+        android:id="@+id/menu_share" />
+
+    <item android:title="Send As"
+        android:icon="@mipmap/share"
+        app:showAsAction="never"
+        android:orderInCategory="0"
+        android:id="@+id/menu_send_as"/>
+
+    <item android:title="Color"
+        android:icon="@mipmap/color"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="0"
+        android:id="@+id/menu_color">
+
+        <menu>
+            <item
+                android:id="@+id/color_yellow"
+                android:orderInCategory="0"
+                android:title="Default"
+                app:showAsAction="never" />
+
+            <item android:id="@+id/color_green"
+                app:showAsAction="never"
+                android:title="Red"/>
+
+            <item android:id="@+id/color_white"
+            android:orderInCategory="0"
+            app:showAsAction="never"
+            android:title="Blue"/>
+
+            <item android:id="@+id/color_night_mode"
+                android:orderInCategory="0"
+                app:showAsAction="never"
+                android:title="Night Mode"/>
+
+        </menu>
+
+
+    </item>
+
+</menu>

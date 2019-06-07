@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false" android:drawable="@drawable/edit_txt_press"/>
+    <item android:drawable="@drawable/edit_txt_bg" android:state_pressed="false"/>
+    <item android:drawable="@drawable/edit_txt_bg"/>
+</selector>

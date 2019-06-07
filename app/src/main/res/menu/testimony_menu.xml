@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.nsc.sodapp.SOD_READ">
+    <item
+        android:id="@+id/write_testimony"
+        android:orderInCategory="100"
+        android:title="Give Testimony"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece8e8"
+    android:orientation="vertical"
+    tools:context="com.nsc.sodapp.HelpSOD">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#acacac"
+        android:text="Welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/help_item_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Thank you for using our Seeds of destiny mobile app. this service is absolutely free and we are working very hard to give you the best features and smooth user experience ever.\nShare thy words with friends and God bless you"
+            android:textColor="#999595"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#e70000"
+        android:text="Help Us *"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/help_item_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="10dp"
+            android:text="You can help us improve the functionality of this app by just giving a little token or buying a cup of water for the developer of this app to keep you updated.\nNo token is little !. God bless you"
+            android:textColor="#a19e9e"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#acacac"
+        android:text="Token Actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/help_item_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatButton
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#026910"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:padding="10dp"
+            android:text="  I WILL HELP  "
+            android:layout_width="wrap_content"
+            android:onClick="iWillHelp"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="#a3a0a0"
+            android:layout_width="1px"
+            android:layout_height="45dp"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:textStyle="bold"
+            android:textColor="#ca0003"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:padding="10dp"
+            android:text="I DON'T WANT"
+            android:onClick="iDontWant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="#a3a0a0"
+            android:layout_width="1px"
+            android:layout_height="45dp"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:textStyle="bold"
+            android:textColor="#006423"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:padding="10dp"
+            android:text="I HAVE DONE THAT"
+            android:onClick="iHave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ff0000"
+        android:text="Important !*"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/help_item_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:padding="10dp"
+            android:textColor="#acacac"
+            android:text="The above actions are not mandatory\nUse one of the above button to continue reading your seeds of destiny.\nthis screen will appear every 5 days of reading to keep reminding you\nWe shall remove this feature in the next update, please take it with us so. Thank you"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>
