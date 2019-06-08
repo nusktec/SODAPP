@@ -2,7 +2,6 @@
 <resources>
 
     <integer-array name="sample_images">
-        <item>@drawable/image_1</item>
         <item>@drawable/image_2</item>
         <item>@drawable/image_3</item>
         <item>@drawable/image_4</item>
@@ -12,8 +11,6 @@
         <item>@drawable/image_7</item>
         <item>@drawable/image_8</item>
         <item>@drawable/image_9</item>
-        <item>@drawable/image_10</item>
-
         <item>@drawable/image_11</item>
         <item>@drawable/image_12</item>
         <item>@drawable/image_13</item>
@@ -41,25 +38,6 @@
         <item>Mist Mountain</item>
     </string-array>
 
-    <integer-array name="people_images">
-        <item>@drawable/photo_male_1</item>
-        <item>@drawable/photo_male_2</item>
-        <item>@drawable/photo_female_1</item>
-        <item>@drawable/photo_female_2</item>
-        <item>@drawable/photo_male_3</item>
-
-        <item>@drawable/photo_female_3</item>
-        <item>@drawable/photo_male_4</item>
-        <item>@drawable/photo_female_4</item>
-        <item>@drawable/photo_female_5</item>
-        <item>@drawable/photo_male_5</item>
-
-        <item>@drawable/photo_female_6</item>
-        <item>@drawable/photo_male_6</item>
-        <item>@drawable/photo_male_7</item>
-        <item>@drawable/photo_female_7</item>
-        <item>@drawable/photo_female_8</item>
-    </integer-array>
 
     <string-array name="people_names">
         <item>Anderson Thomas</item>
@@ -156,30 +134,6 @@
         <item>December</item>
     </string-array>
 
-    <integer-array name="social_images">
-        <item>@drawable/img_social_android</item>
-        <item>@drawable/img_social_apple</item>
-        <item>@drawable/img_social_behance</item>
-        <item>@drawable/img_social_blogger</item>
-        <item>@drawable/img_social_deviantart</item>
-
-        <item>@drawable/img_social_dribbble</item>
-        <item>@drawable/img_social_envato</item>
-        <item>@drawable/img_social_evernote</item>
-        <item>@drawable/img_social_facebook</item>
-        <item>@drawable/img_social_flickr</item>
-
-        <item>@drawable/img_social_instagram</item>
-        <item>@drawable/img_social_linkedin</item>
-        <item>@drawable/img_social_pinterest</item>
-        <item>@drawable/img_social_skype</item>
-        <item>@drawable/img_social_soundcould</item>
-
-        <item>@drawable/img_social_tumblr</item>
-        <item>@drawable/img_social_twitter</item>
-        <item>@drawable/img_social_vimeo</item>
-        <item>@drawable/img_social_youtube</item>
-    </integer-array>
 
     <string-array name="social_names">
         <item>Android</item>
@@ -219,31 +173,6 @@
         <item>@drawable/ic_restaurant</item>
     </integer-array>
 
-    <integer-array name="shop_category_bg">
-        <item>@drawable/image_4</item>
-        <item>@drawable/image_19</item>
-        <item>@drawable/image_20</item>
-        <item>@drawable/image_21</item>
-        <item>@drawable/image_8</item>
-
-        <item>@drawable/image_22</item>
-        <item>@drawable/image_23</item>
-        <item>@drawable/image_24</item>
-    </integer-array>
-
-    <!--shopping product data-->
-    <integer-array name="shop_product_image">
-        <item>@drawable/image_shop_1</item>
-        <item>@drawable/image_shop_2</item>
-        <item>@drawable/image_shop_3</item>
-        <item>@drawable/image_shop_4</item>
-        <item>@drawable/image_shop_5</item>
-
-        <item>@drawable/image_shop_6</item>
-        <item>@drawable/image_shop_7</item>
-        <item>@drawable/image_shop_8</item>
-    </integer-array>
-
     <string-array name="shop_product_title">
         <item>Fashion B07 Keara 933</item>
         <item>Coup Hoodie Jacket</item>
@@ -268,26 +197,6 @@
         <item>$ 96.00</item>
     </string-array>
 
-    <!--music data-->
-    <integer-array name="album_cover">
-        <item>@drawable/image_20</item>
-        <item>@drawable/image_2</item>
-        <item>@drawable/image_3</item>
-        <item>@drawable/image_4</item>
-        <item>@drawable/image_21</item>
-
-        <item>@drawable/image_16</item>
-        <item>@drawable/image_7</item>
-        <item>@drawable/image_17</item>
-        <item>@drawable/image_18</item>
-        <item>@drawable/image_10</item>
-
-        <item>@drawable/image_11</item>
-        <item>@drawable/image_12</item>
-        <item>@drawable/image_19</item>
-        <item>@drawable/image_14</item>
-        <item>@drawable/image_15</item>
-    </integer-array>
 
     <string-array name="song_name">
         <item>All The Arguments</item>

@@ -15,10 +15,10 @@ android {
         applicationId "com.nsc.sodapp"
         minSdkVersion 16
         targetSdkVersion 27
-        versionName '18.0'
+        versionName '19.0'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
-        versionCode 18
+        versionCode 19
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
