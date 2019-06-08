@@ -85,7 +85,7 @@
             android:text="RSC Byte Code"
             android:textAlignment="center"
             android:textColor="#494949"
-            android:textSize="13dp" />
+            android:textSize="10dp" />
 
     </RelativeLayout>
 

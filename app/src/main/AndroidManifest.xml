@@ -19,6 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
+
         <activity
             android:name=".Splash"
             android:configChanges="orientation"

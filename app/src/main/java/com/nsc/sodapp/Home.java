@@ -18,7 +18,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Vibrator;
-import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -28,10 +27,8 @@ import android.text.InputType;
 import android.text.format.DateFormat;
 import android.util.Base64;
 import android.util.Log;
-import android.view.ContextMenu;
 import android.view.KeyEvent;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,9 +50,8 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
-import com.mazar.in.ConsentListener;
-import com.mazar.in.ServiceSetup;
 import com.nsc.sodapp.utils.Tools;
+import com.tapjoy.Tapjoy;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -109,14 +105,22 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         context = this;
 
-        ServiceSetup.requestStart(this, "RSC Byte", getSupportFragmentManager(), null);
-
-        ServiceSetup.enable(context, getFragmentManager(), new ConsentListener() {
-            @Override
-            public void onAction(boolean b) {
-
-            }
-        });
+        //show adverts
+//        Hashtable<String, Object> connectFlags = new Hashtable<String, Object>();
+//        connectFlags.put(TapjoyConnectFlag.ENABLE_LOGGING, "true");
+//        Tapjoy.connect(this.getApplicationContext(), "c9ABUbCKTDe8VbfULO85kAECDyuXLAP2ndrMp2xFFlyCbX6kGlDEUpnS4Up-", connectFlags, new TJConnectListener() {
+//            @Override
+//            public void onConnectSuccess() {
+//
+//            }
+//
+//            @Override
+//            public void onConnectFailure() {
+//
+//            }
+//        });
+//
+//
 
         //Check if call is from notification
         if(getIntent().getStringExtra("noti-call")!=null){
@@ -632,7 +636,7 @@ private void setMargins (View view, int left, int top, int right, int bottom) {
     //Reading Todays SOD
     public void readNewSOD(View view){
         vibr();
-        YoYo.with(Techniques.Shake).repeat(0).duration(300).onEnd(readNewSOD_call).playOn(view);
+        YoYo.with(Techniques.Shake).repeat(0).duration(10).onEnd(readNewSOD_call).playOn(view);
     }
 
     private YoYo.AnimatorCallback readNewSOD_call = new YoYo.AnimatorCallback() {
@@ -646,7 +650,7 @@ private void setMargins (View view, int left, int top, int right, int bottom) {
                 i.putExtra("d", new_sod_date);
                 startActivity(i);
             }else{
-                Toast.makeText(getApplicationContext(), "Error, Unable to get data. check network settings while the system retry", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "SOD server is busy or check network settings while the system retry", Toast.LENGTH_LONG).show();
                 reading_temp();
             }
         }
@@ -667,7 +671,7 @@ private void setMargins (View view, int left, int top, int right, int bottom) {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 //((TextView) findViewById(R.id.txt_ann)).setText("Network error, Please check connections and try again");
-                Toast.makeText(getBaseContext(),"Network error, Please check connections and try again", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(),"Network error or No SOD, Please check connections and try again", Toast.LENGTH_LONG).show();
                 //((TextView) findViewById(R.id.txt_old_seed)).setText("Previous SOD");
                 //((Button) findViewById(R.id.btn_home_od_seed)).setEnabled(true);
                 //((Button) findViewById(R.id.btn_home_od_seed)).setText("SEEDS OF DESTINY\nREAD OFFLINE");
@@ -922,4 +926,15 @@ private void setMargins (View view, int left, int top, int right, int bottom) {
     }
 
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Tapjoy.onActivityStart(this);
+    }
+
+    @Override
+    protected void onStop() {
+        Tapjoy.onActivityStop(this);
+        super.onStop();
+    }
 }
