@@ -13,17 +13,17 @@ android {
     defaultConfig {
         multiDexEnabled true
         applicationId "com.nsc.sodapp"
-        minSdkVersion 17
+        minSdkVersion 16
         targetSdkVersion 27
-        versionName '16.0'
+        versionName '18.0'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
-        versionCode 17
+        versionCode 18
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
