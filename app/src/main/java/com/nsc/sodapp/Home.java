@@ -51,7 +51,6 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
 import com.nsc.sodapp.utils.Tools;
-import com.tapjoy.Tapjoy;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -83,11 +82,6 @@ public class Home extends AppCompatActivity {
 
     public Context genContext;
 
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
 
 
     //Reset Lock
@@ -163,12 +157,16 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.btn_about_t).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                aboutME();
-            }
-        });
+//        findViewById(R.id.btn_about_t).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                aboutME();
+//            }
+//        });
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
 
         findViewById(R.id.btn_upgrade).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -775,7 +773,7 @@ private void setMargins (View view, int left, int top, int right, int bottom) {
         alt.setCancelable(true);
         alt.setIcon(R.mipmap.ic_launcher);
         alt.setTitle("About SOD Mobile");
-        alt.setMessage("App Powered by: DIGC Abuja\nCreated: 2017\nDeveloper: RSCByte Technology\nEmail: nusktecsoft@gmail.com\nTell:+2348164242320\n\n"+"version "+BuildConfig.VERSION_NAME);
+        alt.setMessage("App Powered by: DIGC Abuja\nCreated: 2017\nDeveloper: RSC Byte Limited\nEmail: nusktecsoft@gmail.com\nTell:+2348164242320\n\n"+"version "+BuildConfig.VERSION_NAME);
         alt.show();
     }
 
@@ -925,16 +923,4 @@ private void setMargins (View view, int left, int top, int right, int bottom) {
         alt.show();
     }
 
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Tapjoy.onActivityStart(this);
-    }
-
-    @Override
-    protected void onStop() {
-        Tapjoy.onActivityStop(this);
-        super.onStop();
-    }
 }

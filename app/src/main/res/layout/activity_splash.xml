@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="top|center"
+    android:background="@color/favorite"
     tools:context="com.nsc.sodapp.Splash">
 
 
@@ -43,10 +44,11 @@
 
 
        <ImageView
+           android:visibility="gone"
            android:id="@+id/welcom_animation"
            android:src="@drawable/duna_logo"
            android:layout_width="120dp"
-           android:layout_height="100dp" />
+           android:layout_height="80dp" />
 
        <TextView
            android:layout_width="wrap_content"
@@ -55,8 +57,8 @@
            android:shadowColor="#fff"
            android:text="Seeds Of Destiny"
            android:textAlignment="center"
-           android:textColor="#3949AB"
-           android:textSize="18dp" />
+           android:textColor="#E5E6F3"
+           style="@style/TextAppearance.AppCompat.Display1" />
 
 
        <TextView
@@ -82,7 +84,7 @@
             android:layout_centerHorizontal="true"
             android:layout_margin="10dp"
             android:shadowColor="#242323"
-            android:text="RSC Byte Code"
+            android:text="@string/rsc_byte_limited"
             android:textAlignment="center"
             android:textColor="#494949"
             android:textSize="10dp" />

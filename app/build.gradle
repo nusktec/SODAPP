@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'NSC'
             keyPassword '1994@17'
-            storeFile file('D:/Prog-Xing/Android/Projects/SODAPP/sod-key.jks')
+            storeFile file('/Users/revelation/AndroidStudioProjects/SODAPP/sod-key.jks')
             storePassword '1994@17'
         }
     }
@@ -14,11 +14,11 @@ android {
         multiDexEnabled true
         applicationId "com.nsc.sodapp"
         minSdkVersion 16
-        targetSdkVersion 27
-        versionName '19.0'
+        targetSdkVersion 28
+        versionName '20.0'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
-        versionCode 19
+        versionCode 20
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
@@ -26,6 +26,9 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    dataBinding{
+        enabled=true
     }
     productFlavors {
     }
@@ -48,8 +51,6 @@ dependencies {
     implementation files('libs/android-async-http-1.4.9.jar')
     implementation files('libs/httpclient-4.4.1.2.jar')
     implementation files('libs/jsoup-1.10.2.jar')
-    ///Adverts
-    implementation files('libs/tapjoyconnectlibrary.jar')
 
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'

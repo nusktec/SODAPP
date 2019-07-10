@@ -1,27 +1,25 @@
 package com.nsc.sodapp;
 
-import android.app.Activity;
+import android.animation.Animator;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.Build;
-import android.support.design.widget.Snackbar;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
-import android.util.Log;
-import android.view.ContextMenu;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -31,12 +29,21 @@ import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import org.jsoup.Jsoup;
-import org.jsoup.examples.HtmlToPlainText;
+
+import com.bumptech.glide.Glide;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+import com.nsc.sodapp.databinding.ActivityTempReadBinding;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Calendar;
-import java.util.Random;
 
+import cz.msebera.android.httpclient.Header;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -46,7 +53,7 @@ public class TempRead extends AppCompatActivity {
     int default_color;
     boolean night_mode = false;
 
-
+    ActivityTempReadBinding binding;
 
     @Override
     protected void onStart() {
@@ -70,8 +77,7 @@ public class TempRead extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_temp_read);
-
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_temp_read);
 
         Toolbar myChildToolbar =
                 (Toolbar) findViewById(R.id.sodtool2);
@@ -156,6 +162,19 @@ public class TempRead extends AppCompatActivity {
 
         //light_check();
         ((TextView) findViewById(R.id.tmp_scripture)).setTextColor(openSetting());
+
+        //begin load adverts
+        if(isNetworkAvailable(this)){
+            YoYo.with(Techniques.FadeIn).delay(1000).repeat(0).onEnd(new YoYo.AnimatorCallback() {
+                @Override
+                public void call(Animator animator) {
+                    //It has ended......
+                    playAdverts();
+                }
+            }).playOn(binding.advPanel);
+        }else {
+            binding.advPanel.setVisibility(View.GONE);
+        }
     }
 
 
@@ -303,7 +322,6 @@ public class TempRead extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     public void saveSettings(int color){
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
@@ -331,4 +349,44 @@ public class TempRead extends AppCompatActivity {
         int defaultValue = pref.getInt("coin",0);
         return defaultValue;
     }
+
+    //advert methods
+    String def_url = "https://play.google.com/store/apps/details?id=com.rscbyte.sodmobilepro";
+    void playAdverts(){
+        //declarations
+        binding.advBtnInstall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse((def_url=="")?"https://play.google.com/store/apps/details?id=com.rscbyte.sodmobilepro":def_url));
+                startActivity(browserIntent);
+            }
+        });
+        //load from the web
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams params = new RequestParams();
+        params.put("cmd","adv");
+        client.post("http://api.rscbyte.com/adverts/cmd", params, new JsonHttpResponseHandler(){
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                try {
+                    def_url = response.getString("url"); //url assigned
+                    Glide.with(TempRead.this)
+                            .load(response.getString("img"))
+                            .into(binding.advImage);
+                    binding.advText.setText(String.valueOf(response.getString("text")));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    static private boolean isNetworkAvailable(Context context) {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
 }

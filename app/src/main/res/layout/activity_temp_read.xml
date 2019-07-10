@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+<LinearLayout
     android:id="@+id/temp_redbg"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -106,62 +110,102 @@
             android:id="@+id/footer"
             android:layout_alignParentBottom="true"
             android:background="@color/colorPrimaryDark"
-            android:padding="2dp"
-            android:gravity="center"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
-            <ImageView
-                android:clickable="true"
-                android:onClick="facebook"
-                android:layout_marginLeft="20dp"
-                android:layout_width="18dp"
-                android:layout_height="18dp" android:src="@drawable/facebook"/>
-
-            <View android:layout_width="1dp"
-                android:layout_marginLeft="20dp"
-                android:background="#fff"
-                android:layout_gravity="center"
-                android:layout_height="10dp"/>
-
-            <ImageView
-                android:clickable="true"
-                android:onClick="twitter"
-                android:layout_marginLeft="20dp"
-                android:layout_width="18dp"
-                android:layout_height="18dp" android:src="@drawable/twita"/>
-
-            <View android:layout_width="1dp"
-                android:layout_marginLeft="20dp"
-                android:background="#fff"
-                android:layout_gravity="center"
-                android:layout_height="10dp"/>
-
-            <ImageView
-                android:clickable="true"
-                android:onClick="whatsapp"
-                android:layout_marginLeft="20dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp" android:src="@drawable/whatsap"/>
-
-            <View android:layout_width="1dp"
-                android:layout_marginLeft="20dp"
-                android:background="#fff"
-                android:layout_gravity="center"
-                android:layout_height="10dp"/>
-
-            <TextView
-                android:layout_margin="10dp"
-                android:layout_marginBottom="20dp"
-                android:id="@+id/bottom_date"
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/adv_panel"
+                android:background="#F2F4F7"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Loading..."
-                android:textSize="12dp"
-                android:textColor="#fff"/>
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/duna_logo"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/adv_image"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+
+                    <TextView
+                        android:id="@+id/adv_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/adv_image"
+                        android:layout_toLeftOf="@id/adv_btn_install"
+                        android:layout_centerInParent="true"
+                        android:textSize="12sp"
+                        android:textColor="@color/favorite"
+                        android:text="Install the latest SOD Mobile Pro\nPlaystore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:textAllCaps="false"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        style="@style/Button.Accent.Borderless"
+                        android:id="@+id/adv_btn_install"
+                        android:text="Install Now"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="2dp"
+                android:gravity="center|left"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:clickable="true"
+                    android:onClick="facebook"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" android:src="@drawable/facebook"/>
+
+                <ImageView
+                    android:clickable="true"
+                    android:onClick="twitter"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" android:src="@drawable/twita"/>
+
+                <ImageView
+                    android:clickable="true"
+                    android:onClick="whatsapp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" android:src="@drawable/whatsap"/>
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/bottom_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textSize="12dp"
+                    android:textColor="#fff"/>
+
+            </LinearLayout>
+
+
         </LinearLayout>
 
     </RelativeLayout>
 </LinearLayout>
+</layout>

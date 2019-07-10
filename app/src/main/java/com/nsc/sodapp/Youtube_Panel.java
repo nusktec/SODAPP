@@ -4,6 +4,7 @@ import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Base64;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,6 +15,8 @@ import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
+
+import java.nio.charset.StandardCharsets;
 
 public class Youtube_Panel extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener{
 
@@ -34,9 +37,11 @@ public class Youtube_Panel extends YouTubeBaseActivity implements YouTubePlayer.
 
         playerView = (YouTubePlayerView) findViewById(R.id.youtube_palyer);
 
-        playerView.initialize("AIzaSyDkVP3ddux3_W1_QyzCXzpD66oreimkG1A", this);
-
-
+        byte[] api_base64 = Base64.decode("QUl6YVN5RGtWUDNkZHV4M19XMV9ReXpDWHpwRDY2b3JlaW1rRzFB",Base64.DEFAULT);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            String conv_api_base64 = new String(api_base64, StandardCharsets.UTF_8);
+            playerView.initialize(conv_api_base64, this);
+        }
     }
 
 

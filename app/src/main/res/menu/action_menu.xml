@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item android:title="Chat Room"
+        android:visible="false"
         android:icon="@mipmap/menu_chat"
         app:showAsAction="always"
         android:orderInCategory="0"
@@ -20,9 +21,9 @@
         android:orderInCategory="0"
         android:id="@+id/menu_send_as"/>
 
-    <item android:title="Color"
+    <item android:title="Text Color"
         android:icon="@mipmap/color"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
         android:orderInCategory="0"
         android:id="@+id/menu_color">
 

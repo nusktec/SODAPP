@@ -5,12 +5,13 @@
         android:id="@+id/tell_a_frie"
         android:orderInCategory="0"
         android:title="Invite"
+        android:visible="false"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/church_about"
         android:orderInCategory="0"
-        android:title="About the Church"
+        android:title="About Dunamis"
         app:showAsAction="never" />
 
     <item
@@ -21,6 +22,7 @@
 
 
     <item android:id="@+id/menu_about"
+        android:visible="false"
         android:orderInCategory="0"
         android:icon="@mipmap/about"
         app:showAsAction="always"
