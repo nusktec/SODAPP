@@ -15,15 +15,15 @@ android {
         applicationId "com.nsc.sodapp"
         minSdkVersion 16
         targetSdkVersion 28
-        versionName '20.0'
+        versionName '21.0'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
-        versionCode 20
+        versionCode 21
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

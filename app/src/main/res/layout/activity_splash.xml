@@ -4,77 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="top|center"
     android:background="@color/favorite"
+    android:gravity="top|center"
+    android:orientation="vertical"
     tools:context="com.nsc.sodapp.Splash">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_yellow_min"
+            tools:ignore="ContentDescription" />
 
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:orientation="vertical"
-       android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
 
-       <TextView
-           android:visibility="gone"
-           android:layout_margin="20dp"
-           android:id="@+id/splash_text"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginBottom="87dp"
-           android:text="Seeds Of Destiny"
-           android:textAlignment="center"
-           android:textColor="#fff"
-           android:textSize="20dp"
-           android:shadowColor="@color/colorPrimaryDark"
-           android:paddingTop="5dp"
-           android:paddingBottom="5dp"
-           android:paddingLeft="30dp"
-           android:paddingRight="30dp"
-           android:layout_alignParentBottom="true"
+            <TextView
+                android:id="@+id/splash_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:layout_marginBottom="87dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="5dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="5dp"
+                android:shadowColor="@color/colorPrimaryDark"
+                android:text="Seeds Of Destiny"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="20dp"
 
-           android:layout_centerHorizontal="true" />
-
-
-       <ImageView
-           android:visibility="gone"
-           android:id="@+id/welcom_animation"
-           android:src="@drawable/duna_logo"
-           android:layout_width="120dp"
-           android:layout_height="80dp" />
-
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:gravity="bottom"
-           android:shadowColor="#fff"
-           android:text="Seeds Of Destiny"
-           android:textAlignment="center"
-           android:textColor="#E5E6F3"
-           style="@style/TextAppearance.AppCompat.Display1" />
+                android:visibility="gone" />
 
 
-       <TextView
-           android:id="@+id/textV"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignParentBottom="true"
-           android:layout_centerHorizontal="true"
-           android:gravity="bottom"
-           android:shadowColor="#fff"
-           android:text="Powered by Dunamis Int'l Gospel Centre"
-           android:textAlignment="center"
-           android:textColor="#8B8B8B"
-           android:textStyle="italic"
-           android:textSize="11dp" />
-   </LinearLayout>
+            <ImageView
+                android:id="@+id/welcom_animation"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:src="@drawable/duna_logo"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Display1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:shadowColor="#fff"
+                android:text="Seeds Of Destiny"
+                android:textAlignment="center"
+                android:textColor="#030C3F"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:shadowColor="#220303"
+                android:text="Powered by Dunamis Int'l Gospel Centre"
+                android:textAlignment="center"
+                android:textColor="#0B1449"
+                android:textSize="11dp"
+                android:textStyle="italic" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView"
