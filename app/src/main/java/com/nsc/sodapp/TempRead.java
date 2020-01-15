@@ -37,6 +37,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.nsc.sodapp.databinding.ActivityTempReadBinding;
+import com.nsc.sodapp.utils.Tools;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -64,6 +65,7 @@ public class TempRead extends AppCompatActivity {
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        Tools.setHeaderColor(this);
     }
 
     @Override

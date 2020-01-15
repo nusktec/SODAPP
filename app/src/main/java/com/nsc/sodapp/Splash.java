@@ -29,6 +29,7 @@ import com.daimajia.androidanimations.library.YoYo;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.nsc.sodapp.utils.Tools;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -56,9 +57,9 @@ public class Splash extends AppCompatActivity {
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        Tools.setHeaderColor(this);
 
         final Animation ani = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.move_udwn);
         //findViewById(R.id.splash_logo).startAnimation(ani);

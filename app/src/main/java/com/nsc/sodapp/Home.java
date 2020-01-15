@@ -97,6 +97,7 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Tools.setHeaderColor(this);
         context = this;
 
         //show adverts
@@ -113,8 +114,6 @@ public class Home extends AppCompatActivity {
 //
 //            }
 //        });
-//
-//
 
         //Check if call is from notification
         if(getIntent().getStringExtra("noti-call")!=null){

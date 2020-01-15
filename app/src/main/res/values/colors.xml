@@ -333,6 +333,7 @@
         <item type="color">#ff9800</item>
     </array>
 
+    <color name="light_white">#FFFFFF</color>
     <color name="mainColor">#F1F1F1</color>
     <color name="mainChat">#FFFFFF</color>
     <color name="mainChat2">#FDFDFD</color>

@@ -137,6 +137,12 @@ public class Tools {
         }
     }
 
+    //set global header
+    public static void setHeaderColor(Activity activity) {
+        Tools.setSystemBarColor(activity, R.color.light_white);
+        Tools.setSystemBarLight(activity);
+    }
+
     public static String getFormattedDateSimple(Long dateTime) {
         SimpleDateFormat newFormat = new SimpleDateFormat("MMMM dd, yyyy");
         return newFormat.format(new Date(dateTime));
